@@ -1,6 +1,7 @@
-version: 0.2
+#version: 0.2
 phases:
   install:
+    runtime-versions:
     commands:
       - aws cloudformation package --template-file samTemplate.yaml --s3-bucket pdomala1-lambda-pipeline --output-template-file outputSamTemplate.yaml
 artifacts:
